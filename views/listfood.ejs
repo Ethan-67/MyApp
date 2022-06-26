@@ -1,0 +1,50 @@
+<!doctype html> 
+<html> 
+	<head>
+		<title>List Webpage</title>
+	</head>
+	<h1>This is a List page</h1>
+	<body> 
+		<h3>You can see name and deatils of food here:</h3>
+			<form action="/displayfood" method="POST" >
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Typical values</th>
+				<th>Typical value unit</th>
+				<th>Calories</th>
+				<th>Carbs</th>
+				<th>Fats</th>
+				<th>Proteins</th>
+				<th>Salt</th>
+				<th>Sugar</th>
+				<th>Name added</th>
+				<th>Quantity</th>
+			</tr>
+			<% availablefood.forEach(function(food){  %>
+				<tr>
+					<td><%= food.name %></td>
+					<td><%= food.typicalValues %></td>
+					<td><%= food.typicalValueUnit %></td>
+					<td><%= food.calories %></td>
+					<td><%= food.carbs %></td>
+					<td><%= food.fat %></td>
+					<td><%= food.protein %></td>
+					<td><%= food.salt %></td>
+					<td><%= food.sugar %></td>
+					<td><%= food.userAdded %></td>
+					<br>	
+					
+					<td>
+						<!-- <input type="hidden" name="name" value="<%= food.name %>"/> -->
+						<input type="checkbox" name="checkbox" value="<%= food.name %>"/>
+						<input type="number" name="quantity" value="1"/>
+					</td>
+				</tr>
+			<% }) %>
+		</table>
+			<input type="submit" value="calculate" />	
+		</form> 
+	</body>
+	<a href='./'>Home</a>
+</html>

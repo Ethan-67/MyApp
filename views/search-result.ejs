@@ -1,0 +1,21 @@
+<!doctype html> 
+<html> 
+	<head>
+		<title>Search page</title>
+	</head>
+	<h1>Searching ...</h1>
+	<body> 
+		<h3>Search results:</h3>
+		<ul>
+			<%  (items.forEach(function(food){  %>
+			<li><%= food.name %>,   Typical Value: <%= food.typicalValues %>,   Unit: <%= food.typicalValueUnit %> <br>	
+			Calories: <%= food.calories %>,   Carbs: <%= food.carbs %>,   Fat: <%= food.fat %> <br>	
+			Protein: <%= food.protein %>,   Salt: <%= food.salt %>,   Sugar: <%= food.sugar %>	
+			<br>
+			</li>
+			<% console.log("running ...\n") %>
+			<% })) %>
+		</ul>
+		<a href="./">Home</a> 
+	</body>
+</html>

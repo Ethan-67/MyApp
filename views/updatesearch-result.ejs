@@ -1,0 +1,48 @@
+<!doctype html> 
+	<head>
+		<title>update Search page</title>
+	</head>
+	<h1>Searching ...</h1>
+	<body> 
+		<h3>Search results:</h3>
+			<form action='updatedfood' method="POST">
+				<li>Name:</li>
+				<input type="text" name="name" value="<%= item.name %>" />  
+				<li>Typical Value: </li>
+				<input type="text" name="typicalValues" value="<%= item.typicalValues %>" /> 
+				<br>
+				<li>Typical value unit: </li>
+				<input type="text" name="typicalValueUnit" value="<%= item.typicalValueUnit %>" /> 
+				<li>Calories: </li>
+				<input type="text" name="calories" value="<%= item.calories %>" /> 
+				<br>
+				<li>Carbs: </li>
+				<input type="text" name="carbs" value="<%= item.carbs %>" /> 
+				<li>Fat: </li>
+				<input type="text" name="fat" value="<%= item.fat %>" /> 
+				<br>
+				<li>Protein: </li>
+				<input type="text" name="protein" value="<%= item.protein %>" /> 
+				<li>Salt: </li>
+				<input type="text" name="salt" value="<%= item.salt %>" /> 
+				<br>
+				<li>Sugar: </li>
+				<input type="text" name="sugar" value="<%= item.sugar %>" /> 
+				<li>Person added: </li>
+				<input type="text" name="userAdded" value="<%= item.userAdded %>" /> 
+				<br>
+				<input type="submit" value="update" /> 
+			</form> 
+			<br>
+			<br> 
+			<form action='/deletefood' method='POST'> 
+				<li>Food: </li>
+				<input type="text" name="name" value="<%= item.name %>" readonly/>  
+				<li>Person added: </li>
+				<input type="text" name="userAdded" value="<%= item.userAdded %>" readonly/> 
+				<br>
+				<input type="submit" value='Delete Record' /> 
+			</form> 
+		<a href="./">Home</a> 
+	</body>
+</html>
